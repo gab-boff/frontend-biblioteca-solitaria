@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header";
 
 const headerItems = [
@@ -16,7 +17,9 @@ const Home = () => {
     <div>
       <Header>
         {headerItems.map((item) => (
-          <li key={item.title}>{item.title}</li>
+          <Link className="remove-a-style" to={item.link} key={item.title}>
+            <li key={item.title}>{item.title}</li>
+          </Link>
         ))}
       </Header>
     </div>

@@ -8,7 +8,7 @@ import HeaderInterface from "../../interfaces/HeaderInterface";
 
 import "./styles.scss";
 
-function Header({children}: any): JSX.Element {
+function Header({ children }: any): JSX.Element {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [size, setSize] = useState<HeaderInterface>({
     width: undefined,
@@ -40,7 +40,7 @@ function Header({children}: any): JSX.Element {
   return (
     <header className="header">
       <div className="content">
-        <img src={CesuscLogo} alt="" width='100' height='80' />
+        <img src={CesuscLogo} alt="" width="100" height="80" />
 
         <nav
           className={`navbar ${
@@ -49,9 +49,7 @@ function Header({children}: any): JSX.Element {
               : ""
           }`}
         >
-          <ul className="children-wrapper">
-            {children}
-          </ul>
+          <ul className="children-wrapper">{children}</ul>
         </nav>
         <div className="toggle">
           {!menuIsOpen ? (
