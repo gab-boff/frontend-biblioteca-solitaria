@@ -1,0 +1,104 @@
+@import "../../styles/variables.scss";
+
+// I used this video to help me create the header: https://www.youtube.com/watch?v=D31P9ovJjqs
+
+.header {
+  width: 100%;
+  background-color: var(--eerie-black);
+
+  padding: 0.85rem 1.5rem;
+  
+  transition: 0.3s ease all;
+  
+  @include breakpoint (md) {
+    padding: 0.85rem 2rem 0.85rem 4rem;
+  }
+
+  .content {
+    display: flex;
+
+    color: var(--white);
+    
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      z-index: 100;
+    }
+
+    .navbar {
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+
+      background: var(--eerie-black);
+
+      transition: 0.3s ease transform;
+      color: var(--white);
+      font-size: clamp(1rem, 1.5rem, 2rem);
+
+      @include breakpoint(md) {
+        transform: none;
+        flex-direction: row;
+        background: transparent;
+        width: auto;
+        height: 100%;
+        position: static;
+        color: var(--white);
+        font-size: clamp(0.875rem, 1.25vw, 1.5rem);
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 141px;
+        margin-left: 32px;
+
+        @include breakpoint(md) {
+          flex-direction: row;
+          align-items: flex-end;
+          margin: 0;
+          margin-right: 70px;
+        }
+
+        li {
+          margin-bottom: 1.375rem;
+
+          cursor: pointer;
+
+          transition: 0.3s ease all;
+          &:hover {
+            color: var(--sky-blue);
+          }
+          @include breakpoint(md) {
+            margin-bottom: 0;
+            margin-right: clamp(0.975rem, 1.175rem, 1.375rem);
+          }
+        }
+      }
+
+      &.isMenu {
+        transform: translate(100%);
+      }
+    }
+
+    .toggle {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      transition: 0.3s ease all;
+      position: relative;
+
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+  }
+}

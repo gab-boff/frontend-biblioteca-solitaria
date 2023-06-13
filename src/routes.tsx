@@ -1,6 +1,6 @@
-import Home from "./components/Home";
-import Login from "./components/Login/Login";
-import Register from "./components/Register/Register";
+import Home from "./pages/Home";
+import OldCurriculum from "./pages/OldCurriculum";
+import NewCurriculum from "./pages/NewCurriculum";
 
 const routes = [
   {
@@ -8,12 +8,12 @@ const routes = [
     element: <Home />,
   },
   {
-    path: "/login",
-    element: <Login />,
+    path: "/old-curriculum",
+    element: <OldCurriculum />,
   },
   {
-    path: "/register",
-    element: <Register />,
+    path: "/new-curriculum",
+    element: <NewCurriculum />,
   },
 ];
 
