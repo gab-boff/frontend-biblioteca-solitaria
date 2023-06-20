@@ -31,7 +31,7 @@ const OldCurriculumById = () => {
       <main className="main">
         <h1>Portfólio de Projetos do Curso de ADS</h1>
         <h2>{pageId !== "concluidos" ? `${pageId}ª Fase` : "Concluídos"}</h2>
-        <section>
+        <section className="card-wrapper">
           {repeat.map((item) => (
             <Card key={item} />
           ))}
