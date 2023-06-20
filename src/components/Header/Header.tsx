@@ -7,6 +7,7 @@ import MenuCloseIcon from "../../images/svg/MenuCloseIcon";
 import HeaderInterface from "../../interfaces/HeaderInterface";
 
 import "./styles.scss";
+import { Link } from "react-router-dom";
 
 function Header({ children }: any): JSX.Element {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -40,8 +41,9 @@ function Header({ children }: any): JSX.Element {
   return (
     <header className="header">
       <div className="content">
-        <img src={CesuscLogo} alt="" width="100" height="80" />
-
+        <Link to="/">
+          <img src={CesuscLogo} alt="" width="100" height="80" />
+        </Link>
         <nav
           className={`navbar ${
             menuIsOpen && size.width !== undefined && size.width < 768

@@ -1,16 +1,9 @@
 import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header";
 
-const headerItems = [
-  {
-    title: "Currículo Antigo",
-    link: "/old-curriculum",
-  },
-  {
-    title: "Currículo Novo",
-    link: "/new-curriculum",
-  },
-];
+import "./styles.scss";
+
+import { headerItemsHome as headerItems } from "../../utils/tableColumnData";
 
 const Home = () => {
   return (

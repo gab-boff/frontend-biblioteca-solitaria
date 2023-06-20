@@ -1,40 +1,13 @@
 import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header";
 
-const headerItems = [
-  {
-    title: "1ª Fase",
-    link: "/old-curriculum/1",
-  },
-  {
-    title: "2ª Fase",
-    link: "/old-curriculum/2",
-  },
-  {
-    title: "3ª Fase",
-    link: "/old-curriculum/3",
-  },
-  {
-    title: "4ª Fase",
-    link: "/old-curriculum/4",
-  },
-  {
-    title: "5ª Fase",
-    link: "/old-curriculum/5",
-  },
-  {
-    title: "6ª Fase",
-    link: "/old-curriculum/6",
-  },
-  {
-    title: "Concluídos",
-    link: "/old-curriculum/concluidos",
-  },
-];
+import "./styles.scss";
+
+import { headerItemsOldCurriculum as headerItems } from "../../utils/tableColumnData";
 
 const OldCurriculum = () => {
   return (
-    <div>
+    <div className="container">
       <Header>
         {headerItems.map((item) => (
           <Link className="remove-a-style" to={item.link} key={item.title}>
@@ -42,6 +15,42 @@ const OldCurriculum = () => {
           </Link>
         ))}
       </Header>
+      <main className="main">
+        <h1>Portfólio de Projetos do Curso de ADS</h1>
+        <section>
+          <h2>O Problema</h2>
+          <p>
+            Os projetos de PMI - Projeto Multidisciplinar Integrador - do Curso
+            de ADS são desenvolvidos pelos alunos durante as 6 fases Curso.
+          </p>
+          <p>Em cada uma diferentes artefatos são gerados:</p>
+          <ul>
+            <li>Fase 1 - Apresentação do Ideia</li>
+            <li>Fase 2 - Modelagem de Negócio</li>
+            <li>Fase 3 - Protótipo</li>
+            <li>Fase 4 - Modelagem do Sistema</li>
+            <li>Fase 5 - Codificação</li>
+            <li>Fase 6 - Produto Final</li>
+          </ul>
+          <p>
+            Para os alunos e professores envolvidos há dificuldade em manter um
+            só local para a visualização dos artefatos e o acompanhamento da
+            evolução dos Projetos.
+          </p>
+        </section>
+        <section>
+          <h2>A Solução</h2>
+          <p>
+            Com a participação dos Alunos da Fase 1 - 2021-2, foi criado um Site
+            que possibilita apresentar os Projetos com seus dados básicos e
+            links para os repositórios com protótipos, documentação e códigos
+            fonte. Assim, será possivel dar maior transparência na Comunicação
+            da Evolução do Projeto para os alunos e professores. O Cesusc ainda
+            poderá apresentar a comunidade os estudos desenvolvidos pelos alunos
+            do Curso de ADS.
+          </p>
+        </section>
+      </main>
     </div>
   );
 };

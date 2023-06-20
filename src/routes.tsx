@@ -1,6 +1,10 @@
 import Home from "./pages/Home";
+
 import OldCurriculum from "./pages/OldCurriculum";
 import NewCurriculum from "./pages/NewCurriculum";
+
+import OldCurriculumById from "./pages/OldCurriculumById";
+import NewCurriculumById from "./pages/NewCurriculumById";
 
 const routes = [
   {
@@ -14,6 +18,14 @@ const routes = [
   {
     path: "/new-curriculum",
     element: <NewCurriculum />,
+  },
+  {
+    path: "/old-curriculum/:id",
+    element: <OldCurriculumById />,
+  },
+  {
+    path: "/new-curriculum/:id",
+    element: <NewCurriculumById />,
   },
 ];
 
