@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import CesuscLogo from "../../images/png/cesusc-logo.png";
 import MenuOpenIcon from "../../images/svg/MenuOpenIcon";
@@ -56,7 +56,7 @@ function Header({ children }: any): JSX.Element {
         <div className="toggle">
           {!menuIsOpen ? (
             <div onClick={menuToggleHandler}>
-              <MenuOpenIcon width="24" height="24" />
+              <MenuOpenIcon />
             </div>
           ) : (
             <div onClick={menuToggleHandler}>

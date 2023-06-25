@@ -1,9 +1,32 @@
-.container-id {
+@import "../../styles/variables.scss";
+
+.container-id-new-curriculum {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+
+        @include breakpoint(md) {
+            margin: 1rem 0;
+        }
+    }
+
     h1 {
-        text-align: center;
+        margin: 1rem 0;
     }
 
     h2 {
-        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .card-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+
+        width: auto;
+        gap: 2rem;
     }
 }

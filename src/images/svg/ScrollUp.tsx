@@ -1,5 +1,3 @@
-import React from "react";
-
 function ScrollUp(): JSX.Element {
   return (
     <svg

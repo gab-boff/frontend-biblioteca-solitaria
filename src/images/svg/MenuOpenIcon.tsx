@@ -1,8 +1,4 @@
-import React from "react";
-
-import SvgInterface from "../../interfaces/SvgInterface";
-
-function MenuOpenIcon({ width, height }: SvgInterface): JSX.Element {
+function MenuOpenIcon(): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

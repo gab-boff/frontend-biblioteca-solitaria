@@ -7,17 +7,40 @@ import Card from "../../components/Card";
 import "./styles.scss";
 
 import { headerItemsOldCurriculum as headerItems } from "../../utils/tableColumnData";
+import { getData } from "../../api/api";
 
 const OldCurriculumById = () => {
   const location = useLocation();
 
-  const repeat = [1, 2, 3, 4, 5, 6, 7, 8];
-
   const [pageId, setPageId] = useState(location.pathname.split("/")[2]);
+  const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
     setPageId(location.pathname.split("/")[2]);
   }, [location]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getData();
+        setData(
+          response.filter(
+            (item: any) => item.fase === pageId && item.matriz !== "2023",
+          ),
+        );
+      } catch (error) {
+        console.error("Error occurred while fetching report list:", error);
+      }
+    };
+
+    fetchData();
+  }, [pageId]);
+
+  useEffect(() => {
+    data.map((item) => {
+      console.log(item);
+    });
+  }, [data]);
 
   return (
     <div className="container-id">
@@ -32,8 +55,8 @@ const OldCurriculumById = () => {
         <h1>Portfólio de Projetos do Curso de ADS</h1>
         <h2>{pageId !== "concluidos" ? `${pageId}ª Fase` : "Concluídos"}</h2>
         <section className="card-wrapper">
-          {repeat.map((item) => (
-            <Card key={item} />
+          {data.map((item) => (
+            <Card project={item} key={item.nomeProjeto} />
           ))}
         </section>
       </main>

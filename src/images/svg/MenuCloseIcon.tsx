@@ -1,7 +1,3 @@
-import React from "react";
-
-import SvgInterface from "../../interfaces/SvgInterface";
-
 function MenuCloseIcon(): JSX.Element {
   return (
     <svg
