@@ -1,7 +1,8 @@
 import axios, { AxiosInstance } from "axios";
 
-const baseURL = "http://18.231.52.101:8000";
+// const baseURL = "http://18.231.52.101:8000";
 // const baseURL = "http://localhost:8000";
+const baseURL = "https://chatbotfastapi2.squareweb.app";
 
 const axiosInstance: AxiosInstance = axios.create({
   baseURL,
@@ -12,7 +13,7 @@ const axiosInstance: AxiosInstance = axios.create({
 
 export const getData = async () => {
   try {
-    const response = await axiosInstance.get("/dados-projetos", {
+    const response = await axios.get("https://chatbotfastapi2.squareweb.app/dadosProjetos/", {
       headers: {
         "Content-Type": "application/json",
         // "Authorization": "1096385449351712768-3165192b8c53c612be0bdae62ecbf9d0f968c502b9a03f67c87a62d72214be4c"

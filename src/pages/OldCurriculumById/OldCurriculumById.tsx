@@ -25,7 +25,7 @@ const OldCurriculumById = () => {
         const response = await getData();
         setData(
           response.filter(
-            (item: any) => item.fase === pageId && item.matriz !== "2023",
+            (item: any) => item.fase === Number(pageId) && item.matriz !== 2023,
           ),
         );
       } catch (error) {

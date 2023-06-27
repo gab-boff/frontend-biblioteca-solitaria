@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem;
+
+    @include breakpoint (md) {
+      margin: 0 2rem 0 4rem;
+    }
+
+    h1 {
+      margin: 1rem 0;
+    }
+
+    section {
+      margin: 3rem 0;
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        margin: 1rem 0;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    h1 {
+        text-align: center;
+    }
+  }
+}
