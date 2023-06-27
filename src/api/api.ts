@@ -1,15 +1,15 @@
-import axios, { AxiosInstance } from "axios";
+import axios from "axios";
 
 // const baseURL = "http://18.231.52.101:8000";
 // const baseURL = "http://localhost:8000";
-const baseURL = "https://chatbotfastapi2.squareweb.app";
+// const baseURL = "https://chatbotfastapi2.squareweb.app";
 
-const axiosInstance: AxiosInstance = axios.create({
-  baseURL,
-  headers: {
-    accept: "application/json",
-  },
-});
+// const axiosInstance: AxiosInstance = axios.create({
+//   baseURL,
+//   headers: {
+//     accept: "application/json",
+//   },
+// });
 
 export const getData = async () => {
   try {
