@@ -36,12 +36,6 @@ const OldCurriculumById = () => {
     fetchData();
   }, [pageId]);
 
-  useEffect(() => {
-    data.map((item) => {
-      console.log(item);
-    });
-  }, [data]);
-
   return (
     <div className="container-id">
       <Header>
