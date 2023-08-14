@@ -13,7 +13,7 @@ import axios from "axios";
 
 export const getData = async () => {
   try {
-    const response = await axios.get("https://chatbotfastapi2.squareweb.app/dadosProjetos/", {
+    const response = await axios.get("https://chatbotfastapi.squareweb.app/dadosProjetos/", {
       headers: {
         "Content-Type": "application/json",
         // "Authorization": "1096385449351712768-3165192b8c53c612be0bdae62ecbf9d0f968c502b9a03f67c87a62d72214be4c"
